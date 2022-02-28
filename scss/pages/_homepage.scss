@@ -1,0 +1,295 @@
+.hero-section {
+  height: 520px;
+  margin-bottom: 151px;
+  background-image: url(#{$img-path}/hero-bg.jpg);
+  background-size: cover;
+  @include breakpoint("ipad-max") {
+    height: 450px;
+  }
+
+  .banner {
+    height: 100%;
+    position: relative;
+
+    &__heading {
+      position: absolute;
+      left: 15px;
+      bottom: 67px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-weight: 900;
+
+      &-title {
+        font-size: 57px;
+        background-color: $primary-green;
+        color: $white-color;
+        font-family: $primary-font;
+        margin-bottom: 5px;
+        @include breakpoint("ipad-max") {
+          font-size: 42px;
+        }
+      }
+      &-subtitle {
+        font-size: 36px;
+        background-color: $primary-green;
+        text-transform: uppercase;
+        color: $white-color;
+        margin-bottom: 35px;
+        @include breakpoint("ipad-max") {
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
+      }
+      &-title,
+      &-subtitle {
+        padding: 12px 25px 12px 20px;
+        @include breakpoint("ipad-max") {
+          padding: 8px 16px 8px 14px;
+        }
+      }
+      &-btn {
+        padding: 10px 21px;
+        font-size: 22px;
+        text-transform: uppercase;
+        background-color: $white-color;
+        font-weight: 400;
+        @include breakpoint("ipad-max") {
+          font-size: 15px;
+          padding: 7px 15px;
+        }
+      }
+    }
+    &-icon {
+      width: 80px;
+      height: 78px;
+      background-color: $primary-green;
+      position: absolute;
+      bottom: -39px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+
+      @include flexCenter;
+      &__inner-square {
+        width: 14px;
+        height: 23px;
+        border: 3px solid $white-color;
+      }
+    }
+  }
+}
+
+.irrigation {
+  width: 100%;
+
+  .container {
+    position: relative;
+  }
+
+  &-logo {
+    width: 182px;
+    height: 169px;
+    position: absolute;
+    top: 0px;
+    right: 34px;
+    &-img{
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+    @include breakpoint("ipad-max") {
+      right: 70px;
+      width: 138px;
+      height: 127px;
+    }
+    @include breakpoint("desktop-max") {
+      width: 120px;
+      height: 120px;
+      right: 180px;
+  
+
+
+    }
+
+  }
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    width: 876px;
+    margin: 0 auto 0 59px;  
+    text-transform: uppercase;
+    font-weight: 900;
+    @include breakpoint("ipad-max") {
+      width: 657px;
+    }
+    @include breakpoint("desktop-max") {
+      width: 800px;
+    }
+
+
+    &__middle {
+      text-transform: uppercase;
+      font-size: 121px;
+      line-height: 0.75;
+      font-weight: 900;
+      padding: 0;
+      margin: 13px 0;
+      letter-spacing: -7px;
+      font-family: sans-serif;
+      background-image: url(#{$img-path}/back-text.jpg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-clip: text;
+      background-size: cover;
+      @include breakpoint("ipad-max") {
+        font-size: 80px;
+      }
+      @include breakpoint("desktop-max") {
+        font-size: 110px;
+        line-height: 0.8;
+
+
+      }
+  
+    }
+    &__top,
+    &__bottom {
+      font-size: 43px;
+      @include breakpoint("ipad-max") {
+        font-size: 30px;
+      }
+    }
+    &__top {
+      text-align: left;
+      margin-left: 111px;
+    }
+    &__bottom {
+      text-align: right;
+    }
+  }
+}
+
+.services {
+  width: 100%;
+  padding: 117px 15px 121px 15px;
+  background: $linear-grad-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 130px;
+    &__img {
+      height: 75px;
+      width: 75px;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+.about {
+  background-color: $background-clr-about;
+  background-image: url(#{$img-path}/about-us-bg.png);
+  background-size: calc(50% - 240px);
+  background-repeat: repeat-y;
+  color: $white-color;
+  margin-bottom: 154px;
+  .container {
+    display: flex;
+    padding: 76px 15px 76px 15px;
+    align-items: flex-end;
+  }
+
+  &-img-con {
+    margin: 0 85px 0 0;
+    width: 556px;
+
+    position: relative;
+    &__img {
+      object-fit: cover;
+      height: 352px;
+      border-radius: 15px;
+    }
+
+    &__play-btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 80px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid $secondary-color;
+      &::before {
+        content: "";
+        position: absolute;
+        background: $secondary-color;
+        height: 68px;
+        width: 68px;
+        border-radius: 50%;
+      }
+      &__img {
+        margin-left: 5px;
+        height: 22px;
+        width: 25px;
+        object-fit: contain;
+        z-index: 3;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 393px;
+
+    &__title {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    &__desc {
+      font-size: 16px;
+      line-height: 1.45;
+      margin-bottom: 31px;
+    }
+    &__btn {
+      background-color: $secondary-color;
+      color: $white-color;
+      padding: 10px 21px;
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: 0.7s all ease;
+      &:hover {
+        background-color: $white-color;
+        color: $secondary-color;
+        border-radius: 25px;
+      }
+    }
+  }
+}
